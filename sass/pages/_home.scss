@@ -1,0 +1,15 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: var(--background);
+
+    &-primary {
+        color: var(--clr-primary-400);
+        font-size: 10rem;
+    }
+}

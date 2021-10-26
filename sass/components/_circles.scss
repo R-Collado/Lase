@@ -1,0 +1,19 @@
+.corner-circle {
+    position: absolute;
+    top: -10rem;
+    right: -10rem;
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    background: var(--clr-primary-400);
+    filter: blur(30px);
+}
+
+.circle-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+}

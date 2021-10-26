@@ -1,0 +1,67 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    box-sizing: border-box;
+}
+
+/* reset */
+
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+  html{
+    font-size: 50%;
+  }
+}
+@media (max-width: 500px) {
+  html{
+    font-size: 40%;
+  }
+}
+@media (max-width: 400px) {
+  html{
+    font-size: 35%;
+  }
+}

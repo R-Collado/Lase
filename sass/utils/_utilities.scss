@@ -1,0 +1,16 @@
+.container {
+    padding: 0 var(--spacer, 1rem);
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 40em) {
+    .split {
+        flex-direction: row;
+    }
+}

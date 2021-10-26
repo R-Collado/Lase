@@ -1,0 +1,191 @@
+.player {
+    padding: 10rem;
+    display: none;
+    min-height: 100vh;
+    opacity: 0;
+    background-image: var(--background);
+    color: var(--clr-primary-400);
+    transition:  opacity .75s ease-out, display .75s ease-out;
+    
+
+    & .container {
+        position: relative;
+        animation: turnVisible;
+        animation-duration: 2s;
+    }
+
+    & #filter {
+        display: none;
+        border: none;
+        padding-left: 1rem;
+        border-radius: 100vw;
+        position: absolute;
+        right: 0;
+        top: -5rem;
+        width: 30rem;
+        height: 3rem;
+    }
+
+    & .song-header {
+        display: flex;
+
+        & > div {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-left: 2rem;
+        }
+        
+        & .song-img {
+            opacity: .7;
+            width: 25rem;
+            height: 25rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 4rem .1rem var(--clr-primary-300);
+        }
+        
+        & .song-title {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        & .play-btn {
+            transform: translateX(-1rem);
+            cursor: pointer;
+            width: 8rem;
+        }
+
+        & .volume-control {
+            -webkit-appearance: none;
+            cursor: pointer;
+            height: .8rem;
+            border-radius: 100vw;
+            background: var(--clr-primary-400); 
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                cursor: pointer;
+                background: var(--clr-neutral-100);
+                border: none;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 50%;
+            }
+
+            &::-moz-range-thumb {
+                cursor: pointer;
+                background: var(--clr-neutral-100);
+                border: none;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    & .song-list {
+        margin-top: 10rem;
+        height: 40rem;
+        overflow: auto;
+
+        & > :first-child {
+            padding-bottom: 1rem;
+            border-radius: 0;
+            border-bottom: 1px solid var(--clr-primary-400);
+        }
+    }
+    
+    & .song-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+        border-radius: 100vw;
+        padding: .5rem 1rem;
+        transition: 
+            background-color .25s ease-out,
+            color .25s ease-out
+        ;
+
+
+        &:hover:not(:first-child) {
+            cursor: pointer;
+            background: var(--clr-primary-300);
+            color: var(--clr-primary-500);
+        }
+        
+        & :first-child {
+            text-align: left;
+        }
+
+        & :last-child {
+            text-align: right;
+        }
+    }
+
+    
+}
+
+@media (min-width: 40em) {
+    .player #filter {
+        display: inline-block;
+    }
+}
+.moods {
+    display: block;
+    opacity: 1;
+    padding: 2rem 5rem;
+    min-height: 100vh;
+    min-width: 95vw;
+    background-image: var(--background);
+    color: var(--clr-primary-400);
+    text-align: center;
+    
+    transition: opacity .75s ease-out, display .75s ease-out;
+
+    & .container {
+        animation: turnVisible;
+        animation-duration: 2s;
+    }
+
+    & h2 {
+        transform: translateY(10rem);
+        font-size: 5rem;
+        font-weight: 300;
+        margin-bottom: 5rem;
+    }
+
+    & .split {
+        justify-content: space-around;
+
+        & > * {
+            margin-top: 5rem;
+        }
+    }
+
+    & .mood {
+        cursor: pointer;
+        font-weight: 100;
+        font-size: 3rem;
+        padding: 1.5rem 2rem;
+        border: transparent;
+        border-bottom: 1px solid var(--clr-primary-400);
+        border-radius: 1rem;
+        transition: border .75s ease-out, box-shadow .75s ease-out;
+
+        &:hover {
+            border: 1px solid var(--clr-primary-400);
+            box-shadow: 0 0 2rem .1rem var(--clr-primary-400);
+        }
+    }
+}
+
+@media (min-width: 40em) {
+    .moods h2 {
+        margin-bottom: 0;
+    }
+    .moods .split > * {
+        margin-top: 20rem;
+    }
+}

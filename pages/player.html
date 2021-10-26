@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lase</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <section class="moods">
+        <div class="circle-wrapper">
+            <div class="corner-circle"></div>
+        </div>
+        <div class="container">
+            <h2>How are you feeling today?</h2>
+            <div class="split">
+                <div class="mood-wrapper">
+                    <p id="calmed" class="mood">Calmed</p>
+                </div>
+                <div class="mood-wrapper">
+                    <p id="nervous" class="mood">Nervous</p>
+                </div>
+                <div class="mood-wrapper">
+                    <p id="anxious" class="mood">Anxious</p>
+                </div>
+            </div>
+            <div class="split">
+                <div class="mood-wrapper">
+                    <p id="sleepy" class="mood">Sleepy</p>
+                </div>
+                <div class="mood-wrapper">
+                    <p id="gloomy" class="mood">Gloomy</p>
+                </div>
+                <div class="mood-wrapper">
+                    <p id="lonely" class="mood">Lonely</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="player">
+        <div class="container">
+            <input type="text" name="filter" id="filter">
+            <div class="song-header">
+                <img class="song-img" src="">
+                <div class="song"></div>
+                <div>
+                    <input type="range" min="0" max="100" value="50" class="volume-control">
+                    <h3 class="song-title">Song Title</h3>
+                    <img class="play-btn" id="play-btn" src="/img/play.png">
+                </div>
+            </div>
+            <div class="song-list">
+                <div class="song-info">
+                    <p>Title</p>
+                    <p>Artist</p>
+                    <p><i class="fas fa-clock"></i></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/scripts/songs.js"></script>
+    <script src="/scripts/moods.js"></script>
+</body>
+</html>

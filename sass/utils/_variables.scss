@@ -1,0 +1,17 @@
+:root {
+    
+    --clr-primary-300: #c1c8e4ab;
+    --clr-primary-400: #C1C8E4;
+    --clr-primary-500: #414f86;
+
+    --clr-background-300: #3f5a98d8;
+    --clr-background-400: #3F5998;
+
+    --clr-neutral-100: #FAFAFA;
+
+    --background: linear-gradient(
+        0deg, 
+        var(--clr-background-400),
+        var(--clr-background-300)
+    );
+}
